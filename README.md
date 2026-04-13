@@ -104,3 +104,5 @@ outputs = {
     "segmentation": mask
 }
 
+---
+## Training details
