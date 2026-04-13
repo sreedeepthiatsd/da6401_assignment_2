@@ -4,5 +4,23 @@ Use the Oxford-IIIT Pet Dataset. This is a rich dataset that provides class labe
 
 
 
-* W&B report link
+* W&B report link:
+* Github link:
+
+## Multi-Task Visual Perception Pipeline
+
+This project implements a **complete visual perception pipeline** capable of:
+
+- Image classification (pet breed)
+- Object localization (bounding box)
+- Semantic segmentation (pixel-wise mask)
+
+The system is built using the **Oxford-IIIT Pet Dataset** and follows a **multi-task learning framework with a shared VGG11 backbone**.
+
+## ⚙️ Installation
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
 
