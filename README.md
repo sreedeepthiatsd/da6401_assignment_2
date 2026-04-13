@@ -61,7 +61,8 @@ Our model follows a **multi-task learning framework** that performs classificati
   - ReLU activations
   - MaxPooling layers
 
-**Output Feature Map:** [B,512,7,7]
+**Output Feature Map**:  [B,512,7,7]
+
 ---
 
 ### 2️⃣ Classification Head
@@ -87,7 +88,9 @@ Our model follows a **multi-task learning framework** that performs classificati
   - Transposed Convolutions (Upsampling)
   - Conv + ReLU + Dropout
 
-**Output:** [B, num_classes, 224, 224]
+- Output:
+- [B,num_classes,224,224] 
+  
 ---
 
 ### 5️⃣ Multi-Task Model
