@@ -25,6 +25,7 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 
+
 ## 📊 Dataset
 
 We use the **Oxford-IIIT Pet Dataset**, which provides rich annotations for image understanding tasks.
