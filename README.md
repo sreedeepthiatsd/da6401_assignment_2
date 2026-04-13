@@ -47,3 +47,57 @@ We use the **Oxford-IIIT Pet Dataset**, which provides rich annotations for imag
 - Object Detection → using bounding boxes  
 - Segmentation → using pixel-level masks
 
+## Model Architecture
+
+Our model follows a **multi-task learning framework** that performs classification, localization, and segmentation in a single forward pass.
+
+---
+
+### 1️⃣ Shared Encoder: VGG11
+
+- Custom implementation of **VGG11**
+- Includes:
+  - Batch Normalization
+  - ReLU activations
+  - MaxPooling layers
+
+**Output Feature Map:** [B,512,7,7]
+---
+
+### 2️⃣ Classification Head
+
+- Fully connected layers:
+    *4096 → 4096 → 37
+  - Uses custom dropout layer
+- Outputs class logits for 37 pet breeds
+
+---
+
+### 3️⃣ Localization Head
+
+- Predicts bounding box coordinates:[x_center, y_center, width, height]
+- Uses **sigmoid activation** for normalized outputs
+
+---
+
+### 4️⃣ Segmentation Head (U-Net Style)
+
+- **Encoder:** VGG11 (shared)
+- **Decoder:**
+  - Transposed Convolutions (Upsampling)
+  - Conv + ReLU + Dropout
+
+**Output:** [B, num_classes, 224, 224]
+---
+
+### 5️⃣ Multi-Task Model
+
+A single forward pass produces outputs for all tasks:
+
+```python
+outputs = {
+    "classification": logits,
+    "localization": bbox,
+    "segmentation": mask
+}
+
