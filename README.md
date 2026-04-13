@@ -103,6 +103,7 @@ outputs = {
     "localization": bbox,
     "segmentation": mask
 }
-
+```
 ---
 ## Training details
+
