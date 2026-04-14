@@ -106,4 +106,11 @@ outputs = {
 ```
 ---
 ## Training details
-
+- Adam Optimiser is used
+- Cross Entropy Loss, Mean Square Error, IOU Loss is used in training during various tasks
+## Design Choices
+- Dropout is applied in fully connected layers and decoder to reduce overfitting
+- Batch Normalization is applied after every convolutional layer for better performance
+- VGG11 Encoder is shared for all tasks
+- In Segmentation task, implemented CrossEntropy with class weighting. It handles class imbalance
+- Current training uses reduced dataset for faster execution
