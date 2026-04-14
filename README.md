@@ -3,7 +3,7 @@
 Build a comprehensive, multi-stage Visual Perception Pipeline. Deliver a cohesive system capable of detecting, classifying, and segmenting subjects within an image.
 Use the Oxford-IIIT Pet Dataset. This is a rich dataset that provides class labels (breed), bounding boxes (head), and pixel-level masks (trimaps). The link for this dataset is given here: https://www.robots.ox.ac.uk/~vgg/data/pets/
 
-* W&B report link: 
+* W&B report link: https://api.wandb.ai/links/ee24d044-indian-institute-of-technology-madras/13co9t40
 * Github report link:https://github.com/sreedeepthiatsd/da6401_assignment_2
 
 ## Multi-Task Visual Perception Pipeline
