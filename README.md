@@ -1,5 +1,5 @@
 ## DA6401 Assignment-2 
-# Task:
+## Task:
 Build a comprehensive, multi-stage Visual Perception Pipeline. Deliver a cohesive system capable of detecting, classifying, and segmenting subjects within an image.
 Use the Oxford-IIIT Pet Dataset. This is a rich dataset that provides class labels (breed), bounding boxes (head), and pixel-level masks (trimaps). The link for this dataset is given here: https://www.robots.ox.ac.uk/~vgg/data/pets/
 
@@ -66,8 +66,8 @@ Our model follows a **multi-task learning framework** that performs classificati
 ### 2️⃣ Classification Head
 
 - Fully connected layers:
-    *4096 → 4096 → 37
-  - Uses custom dropout layer
+    4096 → 4096 → 37
+  - Uses Custom dropout layer
 - Outputs class logits for 37 pet breeds
 
 ---
